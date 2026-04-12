@@ -22,6 +22,34 @@ const openai = new OpenAI({ apiKey });
 app.use(cors());
 app.use(express.json());
 
+// reCAPTCHA verification
+app.post('/api/verify-recaptcha', async (req, res) => {
+    const { token } = req.body;
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+
+    if (!token || !secretKey) {
+        return res.json({ success: false, score: 0 });
+    }
+
+    try {
+        const verificationUrl = 'https://www.google.com/recaptcha/api/siteverify';
+        const response = await fetch(verificationUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `secret=${secretKey}&response=${token}`
+        });
+
+        const data = await response.json();
+        res.json({
+            success: data.success && data.score > 0.5,
+            score: data.score || 0
+        });
+    } catch (error) {
+        console.error('reCAPTCHA verification error:', error);
+        res.json({ success: false, score: 0 });
+    }
+});
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
