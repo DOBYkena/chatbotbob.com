@@ -47,16 +47,39 @@ if (forma) {
     forma.addEventListener("submit", function(e) {
         e.preventDefault(); 
 
-        const datum = document.getElementById('datum').value;
-        const vrijeme = document.getElementById('vrijeme').value;
+        // Get reCAPTCHA token
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Ldf_LMsAAAAAMkk0kEcs7ZpcfwQlJP4lxZolHP1', {action: 'submit'}).then(function(token) {
+                const datum = document.getElementById('datum').value;
+                const vrijeme = document.getElementById('vrijeme').value;
 
-        const poruka = `Pozdrav! Zainteresovan/a sam za probni demo BOB chatbota.\n\n📅 Datum: ${datum}\n⏰ Vrijeme: ${vrijeme}\n\nMolim vas da mi potvrdite termin za kratku on-line prezentaciju.`;
-        const contactEmail = "ikinic.kenan99@gmail.com";
-        const mailtoUrl = `mailto:${contactEmail}?subject=${encodeURIComponent('Zahjev za demo BOB chatbota')}&body=${encodeURIComponent(poruka)}`;
+                // Verify token on backend
+                fetch('/api/verify-recaptcha', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ token: token })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success && data.score > 0.5) {
+                        // reCAPTCHA passed, send email
+                        const poruka = `Pozdrav! Zainteresovan/a sam za probni demo BOB chatbota.\n\n📅 Datum: ${datum}\n⏰ Vrijeme: ${vrijeme}\n\nMolim vas da mi potvrdite termin za kratku on-line prezentaciju.`;
+                        const contactEmail = "ikinic.kenan99@gmail.com";
+                        const mailtoUrl = `mailto:${contactEmail}?subject=${encodeURIComponent('Zahjev za demo BOB chatbota')}&body=${encodeURIComponent(poruka)}`;
 
-        window.location.href = mailtoUrl;
-        if (modal) modal.style.display = "none";
-        forma.reset(); 
+                        window.location.href = mailtoUrl;
+                        if (modal) modal.style.display = "none";
+                        forma.reset();
+                    } else {
+                        alert('Sigurnosna provjera nije prošla. Pokušajte ponovo.');
+                    }
+                })
+                .catch(error => {
+                    console.error('reCAPTCHA verification error:', error);
+                    alert('Greška pri sigurnosnoj provjeri. Pokušajte ponovo.');
+                });
+            });
+        });
     });
 }
 
