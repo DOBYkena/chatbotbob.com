@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bot Widget</title>
+</head>
+<body>
+    <script>
+        function getQueryParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name) || '';
+        }
+
+        window.ChatBotConfig = {
+            companyName: getQueryParam('companyName') || 'Your Company',
+            backendUrl: getQueryParam('backendUrl') || window.location.origin,
+            primaryColor: getQueryParam('primaryColor') || '#007bff'
+        };
+    </script>
+    <script src="/chat-bot.js"></script>
+</body>
+</html>

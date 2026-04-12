@@ -1,0 +1,40 @@
+{
+  "ElektricniUredjaji": {
+    "name": "Električni Uređaji d.o.o.",
+    "description": "Prodajemo i servisiramo visoko kvalitetne električne uređaje za dom i obrt. Specijalizirani smo za usisavače, pegle, kućanske aparate i male industrijske strojeve.",
+    "products": [
+      {
+        "name": "PowerVac 3000",
+        "type": "usisavač",
+        "features": ["snažan motor", "HEPA filtracija", "tiho rada"],
+        "price": "1999 kn"
+      },
+      {
+        "name": "SteamPro 2",
+        "type": "pegla",
+        "features": ["parna funkcija", "keramička ploča", "automatsko isključivanje"],
+        "price": "849 kn"
+      },
+      {
+        "name": "HomeChef Mixer",
+        "type": "kuhinjski mikser",
+        "features": ["5 brzina", "staklena zdjela", "snaga 800W"],
+        "price": "1299 kn"
+      }
+    ],
+    "faq": [
+      {
+        "question": "Gdje mogu naručiti proizvode?",
+        "answer": "Narudžbe se mogu izvršiti putem naše web stranice ili telefonski na broj +385 1 234 5678."
+      },
+      {
+        "question": "Nudite li servis i garanciju?",
+        "answer": "Da, svaki uređaj dolazi s 24 mjeseca garancije i servisnom podrškom u roku od 48 sati."
+      },
+      {
+        "question": "Imate li dostavu?",
+        "answer": "Da, dostava je dostupna diljem Hrvatske. Besplatna je za narudžbe iznad 2500 kn."
+      }
+    ]
+  }
+}

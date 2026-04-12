@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOB | Prodajni chatbot za web</title>
+    <meta name="description" content="BOB je napredni prodajni chatbot za web stranice. Omogućava testiranje, podršku i generiranje kvalificiranih upita na jednom mjestu.">
+    <meta name="keywords" content="chatbot, prodajni chatbot, BOB, AI asistent, demo chatbot, kontakt chatbot, web chatbot">
+    
+    <meta property="og:title" content="BOB - Prodajni chatbot">
+    <meta property="og:description" content="Testirajte BOB odmah i saznajte kako brz chatbot može povećati konverzije i podršku vašim klijentima.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat-bot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+</head>
+<body>
+ <nav>
+        <div class="nav-brand"><span>BOB</span>Chatbot</div>
+        <ul>
+            <li><a href="#o-nama">O nama</a></li>
+            <li><a href="#prednosti">Prednosti</a></li>
+            <li><a href="#paketi">Paketi</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <header id="pocetna">
+        <div class="hero-sadrzaj">
+            <div class="hero-copy">
+                <span class="hero-badge">Prodajni chatbot</span>
+                <h1>BOB — inteligentni chatbot za vašu web prodaju</h1>
+                <p>Prodajni i podrški asistent koji vodi klijente, odgovara na najčešća pitanja i generira kvalificirane upite 24/7.</p>
+                <div class="hero-actions">
+                    <button type="button" class="dugme" id="demo-open-button">Isprobajte demo</button>
+                    <a href="#kontakt" class="dugme secondary">Zatražite ponudu</a>
+                </div>
+                <div class="hero-stats">
+                    <div><strong>+35%</strong> veće konverzije</div>
+                    <div><strong>30s</strong> brži odgovor korisnicima</div>
+                    <div><strong>24/7</strong> dostupnost bez pauze</div>
+                </div>
+            </div>
+            <div class="hero-preview">
+                <div class="hero-preview-card">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="BOB chatbot preview" />
+                    <div class="preview-overlay">
+                        <span>Live demo</span>
+                        <p>Pratite razgovor bota s posjetiteljem i vidite kako brzo vodi prodaju.</p>
+                    </div>
+                </div>
+                <div class="hero-small-cards">
+                    <div class="small-card">
+                        <i class="fa-solid fa-comments"></i>
+                        <p>Chat koji privlači posjetitelje</p>
+                    </div>
+                    <div class="small-card">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <p>Moderni korisnički doživljaj</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="povjerenje" class="section-alt">
+        <div class="section-tag">Trusted by teams</div>
+        <h2>BOB stvara povjerenje i rezultate</h2>
+        <p class="section-intro">Upoznajte BOB chatbota koji aktivno vodi kupce kroz ponudu, ubrzava komunikaciju i stavlja vašu uslugu ispred konkurencije.</p>
+        <div class="trusted-grid">
+            <div class="trusted-card skriveno">
+                <i class="fa-solid fa-user-shield"></i>
+                <h3>Sigurna podrška</h3>
+                <p>Prijateljski i profesionalni odgovori koji grade povjerenje kod novih posjetitelja.</p>
+            </div>
+            <div class="trusted-card skriveno">
+                <i class="fa-solid fa-clock"></i>
+                <h3>24/7 dostupnost</h3>
+                <p>Uvijek na vezi za hitna pitanja, narudžbe ili osnovne podrške.</p>
+            </div>
+            <div class="trusted-card skriveno">
+                <i class="fa-solid fa-chart-simple"></i>
+                <h3>Jasna metrike</h3>
+                <p>Vidite kako razgovori konvertiraju i kako bot doprinosi novim upitima.</p>
+            </div>
+        </div>
+    </section>
+
+<section id="o-nama">
+        <h2>Ko smo mi</h2>
+        <div class="o-nama-kontejner">
+            <p>Mi smo Kenan Ikinic i Hamza Jusufovic — tim koji razvija BOB chatbota za tvrtke kojima treba bolja online komunikacija i više konverzija.</p>
+            <p>BOB je dizajniran da bude jednostavan za korištenje, vizualno privlačan i spreman da odmah počne odgovarati posjetiteljima vaše web stranice.</p>
+        </div>
+    </section>
+
+    <section id="prednosti">
+        <h2>Glavne prednosti</h2>
+        <div class="usluge-kontejner feature-grid">
+            <div class="usluga skriveno feature-card">
+                <i class="fa-solid fa-rocket fa-3x"></i>
+                <h3>Brza implementacija</h3>
+                <p>POB postavljamo brzo, s jasnim rezultatima i bez tehničkih prepreka.</p>
+            </div>
+            <div class="usluga skriveno feature-card">
+                <i class="fa-solid fa-headset fa-3x"></i>
+                <h3>Instant podrška</h3>
+                <p>BOB odgovara odmah, čak i kad vaš tim nije dostupan.</p>
+            </div>
+            <div class="usluga skriveno feature-card">
+                <i class="fa-solid fa-bolt fa-3x"></i>
+                <h3>Personalizirano iskustvo</h3>
+                <p>Svaka poruka prilagođena je upitu korisnika i tonu vaše ponude.</p>
+            </div>
+            <div class="usluga skriveno feature-card">
+                <i class="fa-solid fa-chart-line fa-3x"></i>
+                <h3>Bolje konverzije</h3>
+                <p>Pomognite posjetiteljima da brže pronađu ponudu i započnu razgovor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section-alt">
+        <h2>Kako BOB radi</h2>
+        <div class="workflow-grid">
+            <div class="workflow-card skriveno">
+                <span class="step">1</span>
+                <h3>Posjetitelj postavi pitanje</h3>
+                <p>BOB odmah prepoznaje namjeru i započinje razgovor.</p>
+            </div>
+            <div class="workflow-card skriveno">
+                <span class="step">2</span>
+                <h3>Automatski daje rješenje</h3>
+                <p>Poruke su jasno strukturirane i prilagođene vašoj ponudi.</p>
+            </div>
+            <div class="workflow-card skriveno">
+                <span class="step">3</span>
+                <h3>Preusmjerava prema konverziji</h3>
+                <p>Usmjerava klijente na kontakt, narudžbu ili demo brže nego email.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="paketi">
+        <h2>Paketi i cijene</h2>
+        <div class="cijene-kontejner">
+            <div class="cijena-kartica skriveno">
+                <h3>Start</h3>
+                <p class="iznos">199 €</p>
+                <ul>
+                    <li>Standardni chatbot</li>
+                    <li>Osnovna integracija</li>
+                    <li>Support email</li>
+                </ul>
+            </div>
+
+            <div class="cijena-kartica istaknuto skriveno">
+                <h3>Business</h3>
+                <p class="iznos">349 €</p>
+                <ul>
+                    <li>Napredne konverzacijske teme</li>
+                    <li>Personalizirani skripti</li>
+                    <li>Live demo obuka</li>
+                </ul>
+            </div>
+
+            <div class="cijena-kartica skriveno">
+                <h3>Premium</h3>
+                <p class="iznos">599 €</p>
+                <ul>
+                    <li>Integracija s CRM</li>
+                    <li>Analitika i izvještaji</li>
+                    <li>Prioritetna podrška</li>
+                </ul>
+            </div>
+        </div>
+        <p class="paket-napomena">Svi paketi uključuju uvođenje, podešavanje i podršku nakon aktivacije.</p>
+    </section>
+
+    <section id="recenzije">
+        <h2>Iskustva klijenata</h2>
+        <div class="recenzije-kontejner">
+            <div class="recenzija-kartica skriveno">
+                <div class="zvijezde">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"BOB nam je instant podigao konverzije i klijentima dao odgovore dok su čekali."</p>
+                <h4>- Adnan, web trgovina</h4>
+            </div>
+
+            <div class="recenzija-kartica skriveno">
+                <div class="zvijezde">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Intuitivan bot koji omogućava više upita i manje emailova podršci. Prava promjena za naš tim."</p>
+                <h4>- Lejla, prodaja softvera</h4>
+            </div>
+
+            <div class="recenzija-kartica skriveno">
+                <div class="zvijezde">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Jednostavan za upravljanje i odličan za web prezentacije. BOB je sada naš prvi kontakt za upite."</p>
+                <h4>- Damir, agencija</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>Često postavljana pitanja</h2>
+        <div class="faq-kontejner">
+            <details class="faq-stavka">
+                <summary>Kako mogu testirati BOB?</summary>
+                <p>Kliknite ikonu chat bota u donjem desnom kutu. BOB je postavljen da odmah odgovori na pitanja i pokaže mogućnosti.</p>
+            </details>
+
+            <details class="faq-stavka">
+                <summary>Da li BOB može raditi na više stranica?</summary>
+                <p>Da, BOB se može instalirati na više web stranica i lako prilagoditi poruke za svaki katalog proizvoda ili usluga.</p>
+            </details>
+
+            <details class="faq-stavka">
+                <summary>Koje informacije trebate za aktivaciju?</summary>
+                <p>Potrebni su nam osnovni podaci o poslovanju, vaše najčešće upite i lista proizvoda ili usluga. Mi ćemo napraviti konfiguraciju i test demo.</p>
+            </details>
+
+            <details class="faq-stavka">
+                <summary>Koju podršku nudite nakon puštanja u rad?</summary>
+                <p>Svi paketi uključuju startnu podršku i optimizaciju razgovora u prvim tjednima rada.</p>
+            </details>
+        </div>
+    </section>
+    <section id="kontakt">
+        <h2>Kontaktirajte nas</h2>
+        <p>Javite nam se za demo, cijenu ili prilagođenu ponudu za vašu tvrtku.</p>
+        <div class="kontakt-opcije">
+            <a href="mailto:ikinic.kenan99@gmail.com" class="kontakt-btn email"><i class="fa-solid fa-envelope"></i> Email Kenan</a>
+            <a href="mailto:hamzajufusovic06@gmail.com" class="kontakt-btn email"><i class="fa-solid fa-envelope"></i> Email Hamza</a>
+            <a href="#pocetna" class="kontakt-btn secondary"><i class="fa-solid fa-arrow-up"></i> Nazad na početak</a>
+        </div>
+    </section>
+<footer>
+        <div class="footer-kontejner">
+            <div class="footer-kolona">
+                <h3>Kontakti</h3>
+                <p>Kenan Ikinic</p>
+                <p><a href="mailto:ikinic.kenan99@gmail.com">ikinic.kenan99@gmail.com</a></p>
+                <p>Hamza Jusufovic</p>
+                <p><a href="mailto:hamzajufusovic06@gmail.com">hamzajufusovic06@gmail.com</a></p>
+            </div>
+            <div class="footer-kolona">
+                <h3>BOB Chatbot</h3>
+                <p>Prodajni chatbot za web stranice i podršku.</p>
+                <p>Spreman za testiranje odmah.</p>
+            </div>
+        </div>
+        
+        <div class="footer-dno">
+            <p>&copy; 2026 BOB Chatbot. Izrada: Kenan Ikinic & Hamza Jusufovic.</p>
+        </div>
+   </footer>
+    
+    <div id="rezervacija-modal" class="modal-pozadina">
+        <div class="modal-sadrzaj">
+            <span class="zatvori-modal">&times;</span>
+            <h2>Zatražite demo</h2>
+            <p style="margin-top: 10px; color: #555;">Unesite datum i vrijeme za kratki demo BOB chatbota i dobit ćete potvrdu putem emaila.</p>
+            
+          <form id="forma-kalendar">
+                <div class="unos-grupa">
+                    <label for="datum"><i class="fa-regular fa-calendar"></i> Odaberite datum:</label>
+                    <input type="text" id="datum" placeholder="Kliknite za odabir..." required>
+                </div>
+                
+                <div class="unos-grupa">
+                    <label for="vrijeme"><i class="fa-regular fa-clock"></i> Odaberite vrijeme:</label>
+                    <input type="text" id="vrijeme" placeholder="Kliknite za odabir..." required>
+                </div>
+
+                <div class="unos-grupa">
+                    <label for="nacin-kontakta"><i class="fa-regular fa-envelope"></i> Kontakt putem emaila</label>
+                    <select id="nacin-kontakta" required>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="dugme" style="border: none; cursor: pointer; width: 100%; margin-top: 10px;">Pošalji zahtjev</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+      window.ChatBotConfig = {
+        companyName: 'BOB',
+        backendUrl: 'http://localhost:3000',
+        primaryColor: '#004b87',
+        contactEmail: 'ikinic.kenan99@gmail.com'
+      };
+    </script>
+    <script src="chat-bot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/bs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
