@@ -42,6 +42,14 @@ app.get('/chat-bot.css', (req, res) => {
     res.sendFile(path.join(__dirname, 'chat-bot.css'));
 });
 
+app.get('/style.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'style.css'));
+});
+
+app.get('/script.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'script.js'));
+});
+
 function getCompanyInfo(companyName) {
     const companyKey = Object.keys(companyData).find(key =>
         companyData[key].name.toLowerCase().includes(companyName.toLowerCase()) ||
